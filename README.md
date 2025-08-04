@@ -38,8 +38,6 @@ If the connection is successful, the Python script will be able to receive Playg
 
 ### Step 1: Run the sdv-runtime natively on Pi 5
 
-## Docker Run Command
-
 To start the SDV runtime, use the following command:
 
 <pre>  docker run -it --rm -e RUNTIME_NAME="KKK" -p 55555:55555 --name sdv-runtime ghcr.io/eclipse-autowrx/sdv-runtime:latest  </pre>
@@ -98,7 +96,7 @@ pip3 install adafruit-circuitpython-neopixel
 **After that:** open thonny then choose **Tools**, scroll down and click on **Options…** . Then go to **Interpreter** and choose you **Python executable** which is your newly create virtual environment. When finish click **OK** to save.
 
 
-## Step 4: run file **rgb_led.py**
+### Step 4: run file **rgb_led.py**
 
 <pre> 
 from kuksa_client.grpc.aio import VSSClient  # Async gRPC client for KUKSA.val vehicle server
