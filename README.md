@@ -38,7 +38,9 @@ If the connection is successful, the Python script will be able to receive Playg
 
 ### Step 1: Run the sdv-runtime natively on Pi 5
 
-| ```bash<br>docker run -it --rm -e RUNTIME_NAME="KKK" -p 55555:55555 --name sdv-runtime ghcr.io/eclipse-autowrx/sdv-runtime:latest<br>``` |
+| Description | Command |
+|-------------|---------|
+| Run SDV runtime | `docker run -it --rm -e RUNTIME_NAME="KKK" -p 55555:55555 --name sdv-runtime ghcr.io/eclipse-autowrx/sdv-runtime:latest` |
 
 ### Step 2: Configure Pi 5 status
 
