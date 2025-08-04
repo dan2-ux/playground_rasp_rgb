@@ -97,7 +97,7 @@ pip3 install adafruit-circuitpython-neopixel
 
 **After that:** open thonny then choose **Tools**, scroll down and click on **Options…** . Then go to **Interpreter** and choose you **Python executable** which is your newly create virtual environment. When finish click **OK** to save.
 
-<pre>
+<pre> ```
 from kuksa_client.grpc.aio import VSSClient  # Async gRPC client for KUKSA.val vehicle server
 import asyncio                                # Async IO event loop
 
@@ -177,5 +177,5 @@ async def display(stateD, colorD, intenD):
 
 asyncio.run(main())  # Start async main event loop
 
-  
+  ```
 </pre>
