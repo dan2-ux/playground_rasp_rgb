@@ -42,7 +42,7 @@ If the connection is successful, the Python script will be able to receive Playg
 
 To start the SDV runtime, use the following command:
 
-<pre> ```bash docker run -it --rm -e RUNTIME_NAME="KKK" -p 55555:55555 --name sdv-runtime ghcr.io/eclipse-autowrx/sdv-runtime:latest ``` </pre>
+<pre>  docker run -it --rm -e RUNTIME_NAME="KKK" -p 55555:55555 --name sdv-runtime ghcr.io/eclipse-autowrx/sdv-runtime:latest  </pre>
 
 
 ### Step 2: Configure Pi 5 status
@@ -51,18 +51,19 @@ To start the SDV runtime, use the following command:
 
 1. Open terminal and run:
 
-| ```bash<br> sudo raspi-config <br>```  |
+<pre> sudo raspi-config </pre>
 
 Choose **interface option** -> **SPI** -> **enable**.
 Then, reopen terminal then execute
 
-| sudo nano /boot/config.txt |
+<pre> sudo nano /boot/config.txt </pre>
 
 sudo raspi-config
 
 Choose interface option -> SPI -> enable.
 Then, reopen terminal then execute
-sudo nano /boot/config.txt
+
+<pre> sudo nano /boot/config.txt </pre>
  
 Add **dtparam=spi=on** then press **ctrl + s** to save and **ctrl + x** to leave.
 Make sure to reboot to save all the changes.
@@ -75,20 +76,31 @@ Make sure to reboot to save all the changes.
 | #activate the virtual environment  |
 | source ./venv/bin/activate         |
 
+<pre>
+#create virtual enviroment         
+python3 -m venv venv               
+
+#activate the virtual environment  
+source ./venv/bin/activate         
+  
+</pre>
+
 Then install all the dependencies:
 
+<pre>
+# Upgrade pip first 
+pip3 install --upgrade pip 
 
-| # Upgrade pip first |
-| pip3 install --upgrade pip |
-||
-| # Install kuksa_client (may require git or custom installation if not on PyPI) |
-| pip3 install kuksa-client |
-||
-| # Install Adafruit Blinka to get 'board' module |
-| pip3 install adafruit-blinka |
-| |
-| # Install neopixel_spi driver|
-|pip3 install adafruit-circuitpython-neopixel |
+# Install kuksa_client (may require git or custom installation if not on PyPI) 
+pip3 install kuksa-client 
+  
+# Install Adafruit Blinka to get 'board' module 
+pip3 install adafruit-blinka 
+
+# Install neopixel_spi driver
+pip3 install adafruit-circuitpython-neopixel 
+  
+</pre>
 
 
 
