@@ -46,3 +46,44 @@ If the connection is successful, the Python script will be able to receive Playg
 
 ### Step 1: Run the sdv-runtime natively on Pi 5
 
+| sudo raspi-config |
+
+Choose **interface option** -> **SPI** -> **enable**.
+Then, reopen terminal then execute
+
+| sudo nano /boot/config.txt |
+
+sudo raspi-config
+
+Choose interface option -> SPI -> enable.
+Then, reopen terminal then execute
+sudo nano /boot/config.txt
+ 
+Add **dtparam=spi=on** then press **ctrl + s** to save and **ctrl + x** to leave.
+Make sure to reboot to save all the changes.
+
+### Step 3: create a virtual environment by executing.
+
+| #create virtual enviroment         |  
+| python3 -m venv venv               |
+||
+| #activate the virtual environment  |
+| source ./venv/bin/activate         |
+
+Then install all the dependencies:
+
+
+| # Upgrade pip first |
+| pip3 install --upgrade pip |
+||
+| # Install kuksa_client (may require git or custom installation if not on PyPI) |
+| pip3 install kuksa-client |
+||
+| # Install Adafruit Blinka to get 'board' module |
+| pip3 install adafruit-blinka |
+| |
+| # Install neopixel_spi driver|
+|pip3 install adafruit-circuitpython-neopixel |
+
+
+
